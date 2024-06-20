@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=3 uid="uid://v4uqnrm7o451"]
+
+[ext_resource type="Script" path="res://game_over_menu.gd" id="1_lrc0s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gst3l"]
+bg_color = Color(0, 0.27451, 0.454902, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0.199096, 0.495626, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kd73x"]
+bg_color = Color(1.39579e-06, 0.642765, 0.342497, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0.441251, 0.238059, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="GameOverMenu" type="CanvasLayer"]
+script = ExtResource("1_lrc0s")
+
+[node name="GameOverPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -125.0
+offset_right = 50.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gst3l")
+
+[node name="Result" type="Label" parent="."]
+offset_left = 113.0
+offset_top = 200.0
+offset_right = 490.0
+offset_bottom = 258.0
+theme_override_font_sizes/font_size = 36
+text = "Player 1 wins!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Restart" type="Button" parent="."]
+offset_left = 175.0
+offset_top = 300.0
+offset_right = 425.0
+offset_bottom = 363.0
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_kd73x")
+text = "Play again"
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
