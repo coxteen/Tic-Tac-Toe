@@ -1,4 +1,4 @@
-# Tic-Tac-Toe
+# Tic-Tac-Toe game build with Godot 
 
 This is the source code for a simple tic tac toe game that i made using Godot Engine.
 
