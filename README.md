@@ -4,7 +4,9 @@ This is the source code for a simple tic-tac-toe game that I made using Godot En
 
 Game preview : 
 
-![untitled](https://github.com/user-attachments/assets/ed5dcca2-4c22-459d-8c64-a42147096080)
+
+![untitled(1)](https://github.com/user-attachments/assets/7933f160-c93e-49e3-a334-1af48c84d52a)
+
 
 In this game i learned about simple game mechanics and Godot features : 
  - win, lose and draw condition
